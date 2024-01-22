@@ -8,7 +8,8 @@ function submit(){
     var confirmation = confirm("Are you Sure you want to Submit")
     if (confirmation){
         if (firstName === "" || lastName === "" || mailPhone === "" || password === "") {
-            errMsg.style.display = 'block'   
+            errMsg.style.display = 'block'
+            window.location('')
             setTimeout(()=>{
                 errMsg.style.display= 'none'
             }, 4000);
