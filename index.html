@@ -1,56 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scratch Timework</title>
     <link rel="shortcut icon" href="download.png" type="image/x-icon">
     <link rel="stylesheet" href="bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/all.css">
+    <link rel="stylesheet" href="fontawesome-free-6.4.2-web/js/all.js">
 </head>
+
 <body class="bg-dark text-info">
     <div class="container-fluid my-4 mx-auto bg-dark col-lg-7 col-10 mt-lg-5 mt-3 shadow-lg">
-        <h1 class="text-info text-center pt-2" style="font-family:'Courier New', Courier, monospace;font-weight: bold;">School Portal</h1>
-        <div class="alert alert-danger text-warning w-sm-50 fs-5 p-2 mx-auto my-2 bg-danger border-0 text-center" style="display:none;" id="errMsg">Spaces cannot be empty</div>
-        <div class="alert alert-danger text-light w-sm-50 fs-5 p-2 mx-auto my-2 bg-success border-0 text-center" style="display:none;" id="successmsg">Successfully Sumbitted</div>
+        <h1 class="text-info text-center pt-2" style="font-family:'Courier New', Courier, monospace;font-weight: bold;">
+            School Portal</h1>
+        <div class="alert alert-danger text-warning w-sm-50 fs-5 p-2 mx-auto my-2 bg-danger border-0 text-center"
+            style="display:none;" id="errMsg">Spaces cannot be empty</div>
+        <div class="alert alert-danger text-light w-sm-50 fs-5 p-2 mx-auto my-2 bg-success border-0 text-center"
+            style="display:none;" id="successmsg">Successfully Sumbitted</div>
         <div class=" my-3">
             <label for="" class="form-label">First Name:</label>
-            <input type="text" name="" id="firstName" class="form-control form-control-sm shadow-none" placeholder="First Name" autofocus>
+            <input type="text" name="" id="firstName" class="form-control form-control-sm shadow-none"
+                placeholder="First Name" autofocus>
         </div>
 
         <div class=" my-3">
             <label for="" class="form-label">Last Name:</label>
-            <input type="text" name="" id="lastName" class="form-control form-control-sm shadow-none" placeholder="Last Name">
+            <input type="text" name="" id="lastName" class="form-control form-control-sm shadow-none"
+                placeholder="Last Name">
         </div>
 
         <div class=" my-3">
             <label for="" class="form-label">Email / Phone No.:</label>
-            <input type="email" name="" id="mailPhone" class="form-control form-control-sm shadow-none" placeholder="Email">
+            <input type="email" name="" id="mailPhone" class="form-control form-control-sm shadow-none"
+                placeholder="Email">
         </div>
         <div class=" my-3">
             <label for="" class="form-label">Password:</label>
-            <input type="password" name="" id="password" class="form-control form-control-sm shadow-none" placeholder="Passord">
+            <input type="password" name="" id="password" class="form-control form-control-sm shadow-none"
+                placeholder="Passord">
         </div>
 
         <button class="btn btn-sm btn-info w-100 p-2" onclick="submit()">Submit</button>
     </div>
 
     <div class="table-responsive p-lg-2 p-2 col-lg-7 col-10 mx-auto" style="display: none;" id="myTable">
-        <table class="table text-center table-bordered container-fluid mx-auto w-100 my-1 shadow-sm" style="border: 2px solid;">
-          <thead>
-            <tr>
-              <th scope="col" style="background-color:grey;" class="col-1">S/N</th>
-              <th scope="col" style="background-color:grey;" class="col-4">Names</th>
-              <th scope="col" style="background-color:grey;" class="col-4">Email</th>
-              <th scope="col" style="background-color:grey;" class="col-3">Actions</th>
-            </tr>
-          </thead>
-          <tbody id="show">
-          </tbody>
+        <table class="table text-center table-bordered container-fluid mx-auto w-100 my-1 shadow-sm"
+            style="border: 2px solid;">
+            <thead>
+                <tr>
+                    <th scope="col" style="background-color:grey;" class="col-1">S/N</th>
+                    <th scope="col" style="background-color:grey;" class="col-4">Names</th>
+                    <th scope="col" style="background-color:grey;" class="col-4">Email</th>
+                    <th scope="col" style="background-color:grey;" class="col-3">Actions</th>
+                </tr>
+            </thead>
+            <tbody id="show">
+            </tbody>
         </table>
     </div>
-    <div class="text-center mx-auto"><b>The total number of registered student = <span id="countings" class="p-1"> 0 </span></b></div>
+
+
+
+    <div class="text-center mx-auto"><b>The total number of registered student = <span id="countings" class="p-1"> 0</span></b></div>
     <!-- <div class="text-center"><button class="btn btn-info btn-sm mx-2 my-2" onclick="deleteAllItems()">Delete All Items</button></div> -->
-    
+
+    <script src="bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/js/bootstrap.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
