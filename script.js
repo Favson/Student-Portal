@@ -5,7 +5,6 @@ function submit(){
     var lastName = document.getElementById("lastName").value
     var mailPhone = document.getElementById("mailPhone").value
     var password = document.getElementById("password").value
-    // let studentObj = {firstName, lastName, mailPhone, password}
     var confirmation = confirm("Are you Sure you want to Submit")
     if (confirmation){
         if (firstName === "" && lastName === "" && mailPhone === "" && password === "") {
@@ -14,9 +13,6 @@ function submit(){
                 errMsg.style.display= 'none'
             }, 4000);
         }else{
-            setTimeout(()=>{
-                successmsg.style.display= "none"
-            }, 2000);
             var studentObject = {
                 firstName, lastName, mailPhone, password
             }
@@ -27,6 +23,10 @@ function submit(){
             document.getElementById('mailPhone').value = ''
             document.getElementById('password').value = ''
             window.location.href = "dashboard.html"
+            successmsg.style.display= "block"
+            setTimeout(()=>{
+                successmsg.style.display= "none"
+            }, 2000);
         }
     }
 }
@@ -34,12 +34,12 @@ function submit(){
 
 
 studentsInfo = JSON.parse(localStorage.getItem("studentVar")) || [];
-console.log(studentsInfo);
+// console.log(studentsInfo);
 
 function studentList() {
-    document.getElementById('myTable').style.display ="block"
-    var show = document.getElementById("show");
-    var countings = document.getElementById("countings");
+    // document.getElementById('myTable').style.display ="block"
+    let show = document.getElementById("show");
+    let countings = document.getElementById("countings");
 
     countings.innerHTML = studentsInfo.length;
     show.innerHTML = "";
@@ -65,9 +65,9 @@ function studentList() {
                             <div class="modal-body text-info text-center">
                                 <div class="mb-2 alert alert-success p-1" style="display: none;" id="successMsg">Deleted Successfully</div>
                                 <div class="alert alert-danger text-warning w-sm-50 fs-5 mx-auto my-2 bg-danger border-0 text-center" style="display:none;" id="errMsg2">Spaces cannot be empty</div>
-                                <input type="text" id="firstModalInput${x}" placeholder="Input new item" class="col-12 my-3 shadow-none" autofocus>
-                                <input type="text" id="secondModalInput${x}" placeholder="Input the price of the new item" class="col-12 border-none">
-                                <input type="text" id="thirdModalInput${x}" placeholder="Input the price of the new item" class="col-12 border-none">
+                                <input type="text" id="firstModalInput${x}" placeholder="First Name" class="col-12 my-3 shadow-none" autofocus>
+                                <input type="text" id="secondModalInput${x}" placeholder="Second Name" class="col-12 my-3 border-none">
+                                <input type="text" id="thirdModalInput${x}" placeholder="Email" class="col-12 my-3 outline-none">
                             </div>
                             <div class="modal-footer" id="editDiv">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
