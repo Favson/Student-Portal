@@ -7,7 +7,7 @@ function submit(){
     var password = document.getElementById("password").value
     var confirmation = confirm("Are you Sure you want to Submit")
     if (confirmation){
-        if (firstName === "" && lastName === "" && mailPhone === "" && password === "") {
+        if (firstName === "" || lastName === "" || mailPhone === "" || password === "") {
             errMsg.style.display = 'block'
             setTimeout(()=>{
                 errMsg.style.display= 'none'
