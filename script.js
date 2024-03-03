@@ -33,7 +33,7 @@ function submit(){
 
 
 
-studentsInfo = JSON.parse(localStorage.getItem("studentVar"));
+studentsInfo = JSON.parse(localStorage.getItem("studentVar")) || [];
 // console.log(studentsInfo);
 
 function studentList() {
